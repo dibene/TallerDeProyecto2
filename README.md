@@ -15,9 +15,7 @@ You have to install in your computer:
 ## Installation
 
 1. Clone the repo with the command or download the project
-    * Clone: ```git clone https://github.com/LeaCuvelo/tp2_template.git```
-2. Config the .env file
-    * Warning: if you change these vars, you must change it in the database.py file
+    * Clone: "https://github.com/dibene/TallerDeProyecto2.git"
 3. Open a terminal in the root directory
     * Build and run the containers
         * ```docker-compose up -d```
