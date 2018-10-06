@@ -11,8 +11,8 @@ Base = declarative_base()
 class Locations(Base):
     __tablename__ = 'locations'
     id=Column(Integer, primary_key=True)
-    longitude=Column('longitude', float)
-    latitude=Column('latitude', float)
+    longitude=Column('longitude', Integer)
+    latitude=Column('latitude', Integer)
 
     def serialize(self):	#This function returns the objects data in a easily serializable format.
     	return{

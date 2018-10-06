@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="/static/img/icon.png" />
-    <title>Meteorology</title>
+    <title>Iot in transport</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
@@ -15,105 +15,10 @@
 
 <!-- Start body -->
 <body>
-    <!-- Start Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Taller de proyecto II</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/LeaCuvelo/tp2_template">Link to Repository</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/LeaCuvelo/tp2_template/wiki">Link to Documentation</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Navbar -->
 
-    <!-- Start page content -->
-    <div class="container-fluid">
-        <!-- Start jumbotron -->
-        <div class="jumbotron my-4">
-            <h1 class="display-6"> <strong>Welcome to Meteorology System!</strong> </h1>
-            <p class="h6">This web page is a simulation of a weather station. A Raspberry Pi processes and provides the last sample of temperature, humidity, pressure and windspeed data, and the average of all measures. Choose the sampling period and press start.</p>
-            <hr class="my-4">
-            <form>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Select sampling period:</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" style="width: 300px;" name='period' id="period">
-                            <option value='1'>1 second</option>
-                            <option value='2'>2 seconds</option>
-                            <option value='5'>5 seconds</option>
-                            <option value='10'>10 seconds</option>
-                            <option value='30'>30 seconds</option>
-                            <option value='60'>60 seconds</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-            <input type="button" class="btn btn-warning" id="start-sense" value="Start Sense" onclick="startSensor();"/>
-            <input type="button" class="btn btn-warning" id="stop-sense" value="Stop Sense" onclick="stopSensor();"/>
-        </div>
-        <!-- End jumbotron -->
 
-        <!-- Start page features -->
-        <div class="row text-center">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="alert alert-danger" role="alert">
-                    <div calss="card-body">
-                        <h3 class="card-title"> <strong>Temperature</strong> <img class="card-img-top" src="/static/img/Temperature.png" style="width: 36px; height: 36px"> </h3>
-                        <h2 class="" id="last-sample-temperature">0</h2>
-                        <h6><strong>Average:</strong></h6><h6 class="" id="average-temperature">0</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="alert alert-info" role="alert">
-                    <div calss="card-body">
-                        <h3 class="card-title"> <strong>Humidity</strong> <img class="card-img-top" src="/static/img/Humidity.png" style="width: 36px; height: 36px"> </h3>
-                        <h2 class="" id="last-sample-humidity">0</h2>
-                        <h6><strong>Average:</strong></h6><h6 class="" id="average-humidity">0</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="alert alert-warning" role="alert">
-                    <div calss="card-body">
-                        <h3 class="card-title"> <strong>Pressure</strong> <img class="card-img-top" src="/static/img/Pressure.png" style="width: 36px; height: 36px"> </h3>
-                        <h2 class="" id="last-sample-pressure">0</h2>
-                        <h6><strong>Average:</strong></h6><h6 class="" id="average-pressure">0</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="alert alert-secondary" role="alert">
-                    <div calss="card-body">
-                        <h3 class="card-title"> <strong>Windspeed</strong> <img class="card-img-top" src="/static/img/Windspeed.png" style="width: 36px; height: 36px"> </h3>
-                        <h2 class="" id="last-sample-windspeed">0</h2>
-                        <h6><strong>Average:</strong></h6><h6 class="" id="average-windspeed">0</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End page features -->
-    </div>
-    <!-- End page content -->
-
-    <!-- Start final continer -->
-        <footer class="py-4 bg-dark">
-          <div class="container">
-            <p class="m-0 text-center text-white">Created by</p>
-            <p class="m-0 text-center text-white">Leandro Cuvelo</p>
-            <p class="m-0 text-center text-white">Nahuel Sarubbio</p>
-          </div> 
-        </footer>
-    <!-- End final continer -->
+    
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
