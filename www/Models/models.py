@@ -6,7 +6,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-
 #This models will be used in our DataBase.
 #And contains all the data to show in the html.
 class Locations(Base):
