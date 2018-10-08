@@ -2,7 +2,7 @@
 
 ## Description
 
-It's a real-time project that get the location of a transportation vehicle of people
+It's a real-time project that get the location of a transportation vehicle of people.
 We will show in real time the location in an web page with an embedded google maps  with a custom pin of a determined vehicle.
 
 ## Prerequisites
