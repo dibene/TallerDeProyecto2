@@ -11,3 +11,23 @@ var marker = new google.maps.Marker({
 });
 
 }
+
+$(document).ready(function(){
+    sec = 5000;
+    intervalId=0;
+    function sendRequest(){
+        $.ajax({
+          url: "/last",
+          success: 
+            function(data){
+                // TODO graficar en el mapa
+                $( "#divFooter" ).append("<p>latitude:"+ data.latitude +" , longitude: "+data.longitude+" time: "+data.time+"</p>");
+          },
+          complete: function() {
+            clearInterval(intervalId);
+            intervalId = setInterval(sendRequest, sec); 
+       }
+      });
+    };
+    sendRequest();
+  });

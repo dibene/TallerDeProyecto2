@@ -30,11 +30,10 @@ USE `locations`;
 --
 
 CREATE TABLE `locations` (
-  `id` int(11) NOT NULL,
-  `temperature` int(11) NOT NULL,
-  `humidity` int(11) NOT NULL,
-  `pressure` int(11) NOT NULL,
-  `windspeed` int(11) NOT NULL
+  `id` int NOT NULL,
+  `longitude` float NOT NULL,
+  `latitude` float NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
