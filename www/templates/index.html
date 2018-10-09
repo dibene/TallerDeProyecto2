@@ -22,16 +22,31 @@
 	<script>
 		
       var map;
+      var marker;
   	 function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
 		  center: {lat: -34.9205233, lng: -57.9881898},
           zoom: 13,
         });
-        var marker = new google.maps.Marker({
+        var vanIcon = {
+            url: 'http://maps.google.com/mapfiles/kml/shapes/bus.png',
+        }      
+        marker = new google.maps.Marker({
           position: {lat: -34.9205233, lng: -57.9881898},
           map: map,
-	  title: 'Combi I'
+          title: 'Combi I',
+          icon: vanIcon,
+          optimized: false
         });
+        marker.addListener('click', toggleBounce);
+      }
+
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
       }
 
       
