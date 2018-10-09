@@ -1,83 +1,41 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+    <title>Maps JavaScript API</title>
+	<style> 
+  	  #map {
+        height: 100%;
+      }
+     
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+	</style> 
+</head>  
+	<body>
+		<div id ="map"> </div> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD29bUtj6SS8EJZZrzzmi5z_OrlEjF2CYY&callback=initMap" async defer></script>
+	<script>
+		
+      var map;
+  	 function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat: -34.9205233, lng: -57.9881898},
+          zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: -34.9205233, lng: -57.9881898},
+          map: map,
+	  title: 'Combi I'
+        });
+      }
 
-<!-- Start head -->
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="/static/img/icon.png" />
-    <title>Iot in Transport</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
-    <!-- Aca iran los href a los static/css/default etc-->
-    <style> 
-        #map {height: 100%; width: 100%}
-        html, body {height: 90%; width: 100%; margin: 0; padding: 0; }
-    </style> 
-</head>
-<!-- End head -->
+      
+	</script>
 
-<!-- Start body -->
-<body>
-    <!-- Start Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">IoT in Transport</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/dibene/TallerDeProyecto2">Link to Repository</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/dibene/TallerDeProyecto2/wiki">Link to Documentation</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <!-- Start page content -->
-    <div class="container-fluid"> <br>
-        <!-- Start jumbotron -->
-        <div class="jumbotron">
-            <h1 class="display-6"> <strong>Welcome to IoT in Trasnport!</strong> </h1>
-            <p class="h6">This web page is a simulation of a Global Positioning System for a IoT in transport.</p> <br>
-            <p class="lead">
-                <a class="btn btn-warning btn-lg" href="#" role="button">Refresh Location</a>
-            </p>
-        </div>
-        <!-- End jumbotron -->
-    </div>
-    <!-- End jumbotron -->
-
-    <!-- Start map -->
-    <div class="container" id ="map"> </div> 
-    <div class="container" id ="divFooter"> </div> <br>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLd9vVFdm4P-JDKWPuPD4Bf18FuMtlwAk&callback=initMap"type="text/javascript"></script>
-    <!-- End map -->
-
-    <!-- Start final continer -->
-    <footer class="py-4 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Leandro Cuvelo</p>
-            <p class="m-0 text-center text-white">Nahuel Sarubbio</p>
-            <p class="m-0 text-center text-white">Santiago Dibene</p>
-        </div> 
-    </footer>
-    <!-- End final continer -->
-        
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-    <script src="/static/location.js"></script>
-
-</body>
-<!-- End body -->
-
+	</body> 
 </html>
