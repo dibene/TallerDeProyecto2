@@ -26,7 +26,7 @@ USE `locations`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `locations`
+-- Structure for table `locations`
 --
 
 CREATE TABLE `locations` (
@@ -37,21 +37,14 @@ CREATE TABLE `locations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `locations`
+-- Indexes for table `locations`
 --
 ALTER TABLE `locations`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
 --
--- AUTO_INCREMENT de la tabla `locations`
+-- AUTO_INCREMENT of table  `locations`
 --
 ALTER TABLE `locations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
