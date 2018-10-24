@@ -41,9 +41,9 @@ class Database(object):
         session.close()
         return sample
 
-    def addSample(self, latitude, longitude, time):
+    def addSample(self, latitude, longitude, datetime):
         session = self.getSession()
-        sample = Locations(latitude, longitude, time)
+        sample = Locations(latitude = latitude, longitude = longitude, datetime = datetime)
         session.add(sample)
         session.commit()
         session.close()

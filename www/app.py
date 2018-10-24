@@ -26,11 +26,9 @@ def get_last_sample():
 @app.route('/writesample', methods=['POST'])
 def writeSample():
     if request.method == 'POST':
-        latitude=request.form['latitude']
-        longitude=request.form['longitude']
-        datetime=request.form['datetime']
-        #db.addSample(latitude,longitude,datetime)
-        return "OK"
+        if request.form['latitude'] and request.form['longitude'] and request.form['datetime']:
+            db.addSample(latitude = request.form['latitude'], longitude = request.form['longitude'], datetime = request.form['datetime'])
+            return "OK "+request.form['latitude']+" "+request.form['longitude']+" "+request.form['datetime']
     else:
         return "ERROR"
         
@@ -45,4 +43,5 @@ def get_average():
  """
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8888)
+
 

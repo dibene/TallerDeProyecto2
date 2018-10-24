@@ -15,13 +15,18 @@ class Locations(Base):
     id=Column(Integer, primary_key=True)
     longitude=Column('longitude', Float)
     latitude=Column('latitude', Float)
-    time=Column('time', DateTime)
+    datetime=Column('datetime', DateTime)
+
+#     def __init__(self, name=None, email=None):
+#         self.longitude = name
+#         self.latitude = email
+# datetime
     def serialize(self):	#This function returns the objects data in a easily serializable format.
     	return{
     		'id': self.id,
     		'longitude': self.longitude,
     		'latitude': self.latitude,
-            'time': self.time,
+            'datetime': self.datetime,
     	}
     
 
