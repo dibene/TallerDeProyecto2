@@ -17,10 +17,6 @@ class Location(Base):
     latitude=Column('latitude', Float)
     datetime=Column('datetime', DateTime)
 
-#     def __init__(self, name=None, email=None):
-#         self.longitude = name
-#         self.latitude = email
-# datetime
     def serialize(self):	#This function returns the objects data in a easily serializable format.
     	return{
     		'id': self.id,
@@ -29,5 +25,3 @@ class Location(Base):
             'datetime': self.datetime,
     	}
     
-
-
