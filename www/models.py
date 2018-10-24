@@ -10,7 +10,7 @@ Base = declarative_base()
 
 #This models will be used in our DataBase.
 #And contains all the data to show in the html.
-class Locations(Base):
+class Location(Base):
     __tablename__ = 'locations'
     id=Column(Integer, primary_key=True)
     longitude=Column('longitude', Float)

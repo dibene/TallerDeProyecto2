@@ -1,4 +1,4 @@
-from models import Locations
+from models import Location
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
@@ -35,11 +35,11 @@ class Database(object):
         return self.session
     #END function Singleton of database
 
-    def getLastSample(self):
+    def getLastLocation(self):
         session = self.getSession()
-        sample = session.query(Locations).order_by(Locations.id.desc()).first()
+        location = session.query(Location).order_by(Location.id.desc()).first() #TODO make more performante
         session.close()
-        return sample
+        return location
 
     def addSample(self, latitude, longitude, datetime):
         session = self.getSession()
@@ -47,7 +47,7 @@ class Database(object):
         session.add(sample)
         session.commit()
         session.close()
-        return sample
+        return location
 
 
 

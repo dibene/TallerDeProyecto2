@@ -9,7 +9,7 @@ We will show in real time the location in an web page with an embedded google ma
 
 You have to install in your computer:
 
-* [Git (Optional)](https://git-scm.com/downloads)
+* [Git](https://git-scm.com/downloads)
 * [docker-compose](https://docs.docker.com/v17.09/compose/install/)
 
 ## Installation
