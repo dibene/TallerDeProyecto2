@@ -13,8 +13,6 @@ db = Database()
 
 @app.route('/')
 def index():
-   # cmd = "python3 process.py"
-   # subprocess.Popen(cmd.split(), preexec_fn=os.setsid)
     return render_template('index.html')
 
 #This method return the last location in DB
@@ -23,7 +21,7 @@ def get_last_location():
     lastLocation = db.getLastLocation()
     return jsonify(lastLocation.serialize())
 
-@app.route('/writelocation', methods=['POST'])
+@app.route('/writesample', methods=['POST'])
 def writeLocation():
     if request.method == 'POST':
         if request.form['latitude'] and request.form['longitude'] and request.form['datetime']:
