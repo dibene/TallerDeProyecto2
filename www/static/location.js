@@ -1,7 +1,7 @@
 var map;
 var marker;      
 var lastLatLng;  //Last combi latitude and longitude
-var sec = 5000;
+var sec = 15000;
 var intervalId = 0;
 
 function initMap() {
@@ -22,11 +22,6 @@ function displayLastLocation(){
     url: "/last",
     type: 'get',
     success: function (data, status, jqXHR) {
-/*      marker = new google.maps.Marker({
-      position: {lat: data.latitude, lng: data.longitude},
-      map: map,
-      title: 'COMBI I'
-    });    */
       lastLatLng = new google.maps.LatLng(data.latitude, data.longitude);
       marker.setPosition(lastLatLng);
       console.log("SUCCESS");
