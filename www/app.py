@@ -13,6 +13,8 @@ db = Database()
 
 @app.route('/')
 def index():
+    cmd = "python3 process_aux.py"
+    subprocess.Popen(cmd.split(), preexec_fn=os.setsid)
     return render_template('index.html')
 
 #This method return the last location in DB
