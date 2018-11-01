@@ -3,5 +3,5 @@
 *.pyc
 env/
 .DS_Store
-__pycache__
+www/__pycache__
 ._*
