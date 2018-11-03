@@ -24,10 +24,10 @@ def get_last_location():
 @app.route('/writesample', methods=['POST'])
 def writeLocation():
     if request.method == 'POST':
-        if isValidForm(request):
+        if isValidForm(request):  # --> This validation is redundant check and delete it
             try:
                 correctDateTimeFormatted = isCorrectDatetimeWithReturn(request.form['datetime'])
-                if(correctDateTimeFormatted != "Error datetime"):
+                if(correctDateTimeFormatted != "Error datetime format"):
                     db.addSample(latitude = request.form['latitude'], longitude = request.form['longitude'], datetime = correctDateTimeFormatted)
                     return "OK "+request.form['latitude']+" "+request.form['longitude']+" "+request.form['datetime']
                 else:
@@ -35,7 +35,7 @@ def writeLocation():
             except ValueError:
                 print("Incorrect date!")
     else:
-        return "ERROR"
+        return "ERROR Missing fields"
 
 def isValidForm(request):
     return request.form['latitude'] and request.form['longitude'] and request.form['datetime']
@@ -46,7 +46,7 @@ def isCorrectDatetimeWithReturn(datetimeToValidate):
         time.strptime(datetimeToValidate, timeformat)
         return datetimeToValidate
     except ValueError:
-        return "Error datetime"
+        return "Error datetime format"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8888)

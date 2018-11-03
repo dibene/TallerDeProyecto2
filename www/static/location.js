@@ -25,7 +25,8 @@ function displayLastLocation(){
       lastLatLng = new google.maps.LatLng(data.latitude, data.longitude);
       marker.setPosition(lastLatLng);
       console.log("SUCCESS");
-      console.log("SUCCES TO RETRIEVE DATA " + data.msg);
+      console.log("SUCCES TO RETRIEVE DATA Latitude: " + data.latitude);
+      console.log("SUCCES TO RETRIEVE DATA Latitude: " + data.longitude);
     },
     error: function (msg, status, jqXHR) {
       console.log("ERROR");
