@@ -17,7 +17,7 @@ def index():
 
 #This method return the last location in DB
 @app.route('/last', methods = ["GET"])
-def get_last_location():
+def getLasLocation():
     lastLocation = db.getLastLocation()
     return jsonify(lastLocation.serialize())
 
