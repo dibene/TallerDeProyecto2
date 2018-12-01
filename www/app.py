@@ -24,7 +24,7 @@ def getLasLocation():
 @app.route('/writesample', methods=['POST'])
 def writeLocation():
     if request.method == 'POST':
-        if isValidForm(request):  # --> This validation is redundant check and delete it
+        if isValidForm(request):  
             try:
                 correctDateTimeFormatted = isCorrectDatetimeWithReturn(request.form['datetime'])
                 if(correctDateTimeFormatted != "Error datetime format"):
