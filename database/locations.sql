@@ -31,8 +31,8 @@
 
   CREATE TABLE `locations` (
     `id` int NOT NULL,
-    `longitude` float NOT NULL,
-    `latitude` float NOT NULL,
+    `longitude` float(8,6) NOT NULL,
+    `latitude` float(8,6) NOT NULL,
     `datetime` datetime NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

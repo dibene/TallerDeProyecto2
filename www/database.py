@@ -45,8 +45,13 @@ class Database(object):
         session = self.getSession()
         location = Location(latitude = latitude, longitude = longitude, datetime = datetime)
         session.add(location)
-        session.commit()
-        session.close()
+        try:
+            session.commit()
+        except:
+            session.rollback()
+            raise
+        finally:
+            session.close()
         return location
 
 

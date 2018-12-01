@@ -1,7 +1,7 @@
 var map;
 var marker;      
 var lastLatLng;  //Last combi latitude and longitude
-var sec = 15000;
+var sec = 5000;
 var intervalId = 0;
 
 function initMap() {
