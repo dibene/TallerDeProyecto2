@@ -1,7 +1,7 @@
 var map;
 var marker;      
 var lastLatLng;  //Last combi latitude and longitude
-var sec = 5000;
+var sec = 3000;
 var intervalId = 0;
 var combiIcon = '/static/img/bus_aHy_icon.ico'
 
